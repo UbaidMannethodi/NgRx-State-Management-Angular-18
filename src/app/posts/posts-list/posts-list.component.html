@@ -14,13 +14,19 @@
         <th>Id</th>
         <th>Title</th>
         <th>Description</th>
+        <th>Actions</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor="let post of postsData">
-        <td>{{ post?.id }}</td>
-        <td>{{ post?.title }}</td>
-        <td>{{ post?.description }}</td>
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+        <td>{{ post.description }}</td>
+        <td>
+          <a href="" class="btn btn-primary" [routerLink]="['edit', post.id]"
+          >Update
+          </a>
+        </td>
       </tr>
       </tbody>
     </table>
